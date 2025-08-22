@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8" />
     <title>Sistem Dashboard</title>
@@ -24,16 +24,75 @@
 
     <div id="menu-container" class="container">
         <div class="profile-section">
-            <img id="profile-pic" alt="Profile Picture">
+            <img id="profile-pic" alt="Foto Profil">
             <h1 id="user-name"></h1>
             <p id="expiry-info" class="expiry-info"></p>
         </div>
-        <img src="logo.png" class="logo"/>
+        <img src="logo.png" class="logo" alt="Logo"/>
         <h2>Menu</h2>
         <p>Select Target</p>
-        <input type="text" id="target" placeholder="Target number (e.g. +62 812...)">
-        <select id="bug-type">
-            <option>bug ui</option>
+        <input type="text" id="target" placeholder="Nomor target (misal: 62812...)">
+        <select id="pesan-type">
+            <option>Pesan 3</option>
+            <option>Pesan 2</option>
+            <option>Pesan 1</option>
+        </select>
+        <button id="sendBtn">▶ KIRIM Pesan</button>
+        
+        <hr/>
+        
+        <div class="message-section">
+            <h3>Kotak Pesan</h3>
+            <div id="message-list" class="message-list"></div>
+            <div class="message-reply">
+                <input type="text" id="reply-input" placeholder="Tulis balasan...">
+                <button id="reply-btn">Kirim Balasan</button>
+            </div>
+        </div>
+
+        <button id="logout-btn" class="logout-btn">LOGOUT</button>
+    </div>
+
+    <div id="admin-panel" class="container">
+        <h2>Admin Dashboard</h2>
+        <p>Manajemen Akun Pengguna</p>
+        <div class="input-group">
+            <label for="new-username">Username Baru</label>
+            <input type="text" id="new-username" placeholder="Username baru">
+        </div>
+        <div class="input-group">
+            <label for="new-password">Password Baru</label>
+            <input type="password" id="new-password" placeholder="Password baru">
+        </div>
+        <div class="input-group">
+            <label for="expiry-days">Masa Aktif (hari)</label>
+            <input type="number" id="expiry-days" placeholder="Contoh: 30">
+        </div>
+        <button id="create-account-btn">Buat Akun</button>
+        
+        <hr/>
+        
+        <div class="admin-message-section">
+            <h3>Kirim Pesan ke Semua Pengguna</h3>
+            <textarea id="admin-message-input" placeholder="Tulis pesan untuk semua pengguna..."></textarea>
+            <button id="send-to-all-btn">Kirim ke Semua Pengguna</button>
+        </div>
+        
+        <hr/>
+        
+        <h3>Daftar Akun</h3>
+        <ul id="user-list"></ul>
+        <button id="admin-logout-btn" class="logout-btn">LOGOUT</button>
+    </div>
+    
+    <div class="developer-info">
+      <p>Dev: kepforannas7hs</p>
+      <p>Telegram: @ Kepforannas</p>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
             <option>bug lag</option>
             <option>bug fc</option>
         </select>
