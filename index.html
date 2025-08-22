@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Sistem Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="login-container" class="container active">
+        <h2>Selamat Datang</h2>
+        <p>Silakan login untuk melanjutkan</p>
+        <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Masukkan username Anda">
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Masukkan password Anda">
+        </div>
+        <button id="login-btn">LOGIN</button>
+        <p id="error-message" class="error-message"></p>
+    </div>
+
+    <div id="menu-container" class="container">
+        <div class="profile-section">
+            <img id="profile-pic" alt="Profile Picture">
+            <h1 id="user-name"></h1>
+            <p id="expiry-info" class="expiry-info"></p>
+        </div>
+        <img src="logo.png" class="logo"/>
+        <h2>Menu</h2>
+        <p>Select Target</p>
+        <input type="text" id="target" placeholder="Target number (e.g. +62 812...)">
+        <select id="bug-type">
+            <option>bug ui</option>
+            <option>bug lag</option>
+            <option>bug fc</option>
+        </select>
+        <button id="sendBtn">▶ SEND BUG</button>
+        
+        <hr/>
+        
+        <div class="message-section">
+            <h3>Kotak Pesan</h3>
+            <div id="message-list" class="message-list"></div>
+            <div class="message-reply">
+                <input type="text" id="reply-input" placeholder="Tulis balasan...">
+                <button id="reply-btn">Kirim Balasan</button>
+            </div>
+        </div>
+
+        <button id="logout-btn" class="logout-btn">LOGOUT</button>
+    </div>
+
+    <div id="admin-panel" class="container">
+        <h2>Admin Dashboard</h2>
+        <p>Manajemen Akun Pengguna</p>
+        <div class="input-group">
+            <label for="new-username">Username Baru</label>
+            <input type="text" id="new-username" placeholder="Username baru">
+        </div>
+        <div class="input-group">
+            <label for="new-password">Password Baru</label>
+            <input type="password" id="new-password" placeholder="Password baru">
+        </div>
+        <div class="input-group">
+            <label for="expiry-days">Masa Aktif (hari)</label>
+            <input type="number" id="expiry-days" placeholder="Contoh: 30">
+        </div>
+        <button id="create-account-btn">Buat Akun</button>
+        
+        <hr/>
+        
+        <div class="admin-message-section">
+            <h3>Kirim Pesan ke Semua Pengguna</h3>
+            <textarea id="admin-message-input" placeholder="Tulis pesan untuk semua pengguna..."></textarea>
+            <button id="send-to-all-btn">Kirim ke Semua Pengguna</button>
+        </div>
+        
+        <hr/>
+        
+        <h3>Daftar Akun</h3>
+        <ul id="user-list"></ul>
+        <button id="admin-logout-btn" class="logout-btn">LOGOUT</button>
+    </div>
+    
+    <div class="developer-info">
+      <p>Dev: kepforannas7hs</p>
+      <p>Telegram: @ Kepforannas</p>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
