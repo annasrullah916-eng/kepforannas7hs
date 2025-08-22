@@ -4,7 +4,7 @@
 /* Gaya dasar untuk seluruh halaman */
 body {
     font-family: 'Poppins', sans-serif;
-    background: #141e30; /* Warna dasar gelap */
+    background: #141e30;
     background: -webkit-linear-gradient(to right, #243b55, #141e30);
     background: linear-gradient(to right, #243b55, #141e30);
     color: #e0e0e0;
@@ -43,7 +43,7 @@ body {
 
 /* Gaya untuk judul dan sub-judul */
 h1, h2 {
-    color: #64ffda; /* Warna hijau cerah */
+    color: #64ffda;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 10px;
